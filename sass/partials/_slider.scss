@@ -1,0 +1,121 @@
+.section-hobby {
+  display: flex;
+  flex-direction: column;
+}
+
+.free-time {
+  @include text-color();
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  letter-spacing: 0.2rem;
+}
+
+.free-time::after {
+  @include after(40%, 0.2rem, 76%);
+  margin-top: 10px;
+}
+
+.section-slider {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  margin: 20px 0;
+}
+
+.background-slider {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 95%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: $blackColor;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.slider {
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  top: 0px;
+  left: 20px;
+  border: 2px solid $goldColor;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.title-slider {
+  @include center(0, 50%, -50%, 0);
+  margin-top: 15px;
+  font-size: 3rem;
+  color: $goldColor;
+  z-index: 2;
+}
+
+.slider-text {
+  @include center(40%, 50%, -50%, -50%);
+  width: 80%;
+  font-size: 2rem;
+  text-align: center;
+  color: $goldColor;
+  z-index: 2;
+}
+
+.more-btn {
+  @include center(55%, 50%, -50%, -50%);
+  background: $mainBackground;
+  width: 15%;
+  z-index: 2;
+}
+
+.click-btn {
+  top: 80%;
+}
+
+.fa-angle-right {
+  @include text-color();
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  font-size: 3.5rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.fa-angle-left {
+  @include center(50%, 5%, 0, -50%);
+  @include text-color();
+  font-size: 3.5rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dots span {
+  display: inline-block;
+  background-color: $blackColor;
+  margin: 0 20px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px white;
+}
+
+.dots span.active-dots {
+  box-shadow:
+    0 0 0 5px $lightGoldColor,
+    0 0 3px 9px $blackColor;
+}

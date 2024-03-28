@@ -1,0 +1,79 @@
+.my-skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.head-text {
+  text-align: center;
+  margin: 10px 0 40px 0;
+}
+
+.head-text::after {
+  @include after(30%, 0.2rem, 115%);
+  margin-top: 10px;
+}
+
+.main-header {
+  @include text-color();
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.second-header {
+  @include text-color();
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+.all-pictures {
+  display: flex;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  padding: 20px;
+}
+
+.pictures {
+  width: 60%;
+  height: 40%;
+  margin: 20px auto 50px auto;
+}
+
+.open-text {
+  position: relative;
+  width: 50%;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  background: $mainBackground;
+  border: 2px solid $blackColor;
+  border-radius: 15px;
+  margin: 0 auto;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.open-text:hover {
+  background: $hoverTextColor;
+  font-size: 1rem;
+}
+
+.active {
+  display: none;
+}
+
+.active-text {
+  display: none;
+}
+
+.text-technology {
+  @include text-color();
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}

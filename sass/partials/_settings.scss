@@ -1,0 +1,64 @@
+// Variables
+
+$blackColor: #000;
+$mainPageOneColor: #262626;
+$mainPageTwoColor: #1f1e1e;
+$mainPageThreeColor: #161616;
+$sliderTitleColor: #756423;
+$goldColor: #574e20;
+$lightGoldColor: #cfb53b;
+$colorHover: rgb(161, 140, 47);
+$textColor: -webkit-gradient(linear,
+  left top,
+  right bottom,
+  from(#574e20),
+  to(#cfb53b));
+$hoverTextColor: -webkit-gradient(linear,
+  left top,
+  right bottom,
+  from(#332c0b),
+  to(#73641c));
+$mainBackground: linear-gradient(to left,
+  rgb(161, 140, 47),
+  rgb(97, 84, 22),
+  rgba(51, 44, 11, 1));
+
+$bodyColor: linear-gradient(to right,
+  rgba(230, 230, 230, 1),
+  rgba(195, 195, 195, 1),
+  rgba(189, 189, 189, 1));
+
+$widthColor: linear-gradient(to right,
+  $mainPageOneColor 6%,
+  $mainPageTwoColor 30%,
+  $mainPageThreeColor 58%);
+
+$backgroundMenuHamburger: linear-gradient(180deg, rgba(43, 43, 43, 1) 0%, rgba(4, 4, 4, 1) 100%);
+
+$aboutMeFont: 'Fira Sans',
+sans-serif;
+$fontSize: 10px;
+
+
+
+@mixin after($width, $height, $translate) {
+  content: '';
+  display: block;
+  width: $width;
+  height: $height;
+  background: $goldColor;
+  transform: translateX($translate);
+}
+
+@mixin text-color() {
+  background-image: $textColor;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin center($top, $left, $transformX, $transformY) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  transform: translate($transformX, $transformY);
+}

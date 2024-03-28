@@ -1,0 +1,34 @@
+.main-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.programing-picture {
+  position: absolute;
+  top: 5%;
+  left: 12%;
+  width: 60%;
+  height: 50%;
+}
+
+.name {
+  @include center(55%, 50%, -50%, 0);
+  @include text-color();
+  font-size: 6rem;
+  letter-spacing: 0.4rem;
+}
+
+.work {
+  @include center(73%, 50%, -50%, 0);
+  @include text-color();
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+
+.main-page::after {
+  @include after(80%, 0.3rem, -50%);
+  position: absolute;
+  top: 95%;
+  left: 50%;
+}
